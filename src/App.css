@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/d03165bd677535fe8da7479e26b13180?family=Azo+Sans+Uber+W01+Regular);
+
+::-webkit-scrollbar {
+    display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.slider-box-ABout {
+    width: 220px;
+    perspective: 1000px;
+    position: relative;
+    top: -4%;
+    right: 0;
+    transform: rotate(12deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel {
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.it1 {
+    transform: rotateY(0deg) translateZ(35vh);
 }
 
-.App-link {
-  color: #61dafb;
+.it2 {
+    transform: rotateY(40deg) translateZ(35vh);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.it3 {
+    transform: rotateY(80deg) translateZ(35vh);
+}
+
+.it4 {
+    transform: rotateY(120deg) translateZ(35vh);
+}
+
+.it5 {
+    transform: rotateY(160deg) translateZ(35vh);
+}
+
+.it6 {
+    transform: rotateY(200deg) translateZ(35vh);
+}
+
+.it7 {
+    transform: rotateY(240deg) translateZ(35vh);
+}
+
+.it8 {
+    transform: rotateY(280deg) translateZ(35vh);
+}
+
+.it9 {
+    transform: rotateY(320deg) translateZ(35vh);
+}
+
+.it10 {
+    transform: rotateY(360deg) translateZ(35vh);
+}
+
+.carousel .img {
+    transition: ease-in-out 0.5s;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel:hover {
+    animation-play-state: paused;
+}
+
+.carousel .backface {
+    backface-visibility: hidden;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
 }

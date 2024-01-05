@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Faq from './components/Faq';
+import './App.css';
+import Header from './components/Header';
+import About from './components/About';
+import Utilities from './components/Utilities';
+import TheKong from './components/TheKong';
+import MintNft from './components/MintNft';
+import RoadMap from './components/RoadMap';
+import Partners from './components/Partners';
+import TheTeam from './components/TheTeam'; import { useEffect, useState } from 'react';
+import Backtop from './components/Backtop';
+;
+
+document.body.classList.add("overflow-hidden")
 function App() {
+  const [load, setload] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      document.body.classList.remove('overflow-hidden')
+      setload(false)
+    }, 4000);
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        {load === true && <div className=' fixed w-full h-full flex justify-center items-center bg-black z-30'> <div className='w-10 border-t-4 rounded-full animate-spin  h-10'></div></div>}
+      </div>
+      <Header />
+      <About />
+      <Utilities />
+      <TheKong />
+      <MintNft />
+      <RoadMap />
+      <Partners />
+      <TheTeam />
+      <Backtop />
+      <Faq />
     </div>
   );
 }
