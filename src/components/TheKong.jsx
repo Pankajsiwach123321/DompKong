@@ -78,7 +78,7 @@ const TheKong = () => {
             className="lg:max-w-[181px] cursor-pointer  sm:max-w-[121px] max-w-[121px]  sm:absolute right-[-2%] lg:bottom-[2%] bottom-[14%]  rounded-lg border-[#FDDA60] border-[4px]  z-[2]"
           />
         </span>
-        <div className="md:h-[800px] sm:h-[400px] h-[300px]">
+        <div className="md:h-[800px] sm:h-[400px] h-[365px]">
           {character === "tab1" && (
             <div>
               <img
