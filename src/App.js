@@ -10,7 +10,7 @@ import RoadMap from './components/RoadMap';
 import Partners from './components/Partners';
 import TheTeam from './components/TheTeam'; import { useEffect, useState } from 'react';
 import Backtop from './components/Backtop';
-;
+document.body.classList.add('overflow-hidden')
 
 document.body.classList.add("overflow-hidden")
 function App() {
@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        {load === true && <div className=' fixed w-full h-full flex justify-center items-center bg-black z-30'> <div className='w-10 border-t-4 rounded-full animate-spin  h-10'></div></div>}
+        {load === true && <div className=' fixed top-0 bottom-0  w-full h-full flex justify-center items-center bg-black z-30'> <div className='w-10 border-t-4 rounded-full animate-spin  h-10'></div></div>}
       </div>
       <Header />
       <About />
